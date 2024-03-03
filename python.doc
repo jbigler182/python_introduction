@@ -1,0 +1,219 @@
+Python Introduction
+
+The Dark Side (The Server Side)
+
+Why Python?
+    1. Great language to know. It's widely used. Powerful. Most loved. etc.
+    2. Super clean syntax.
+    3. Can be used for a bunch of stuff, data science, machine laerning, making servers, etc.
+    4. WE ARE REALLY DOING IT TO LEARN A SECOND LANGUAGE. IT WILL HELP ME UNDERSTAND JS BETTER!
+    5. GOTTA GET OUT OF JS LAND. Learning one language is a recipe for misconception
+    6. WANT TO ALWAYS BE FORCED OUT OF COMFORT ZONE
+
+Type python3 in ubuntu to open the python3 REPL (Read Evaluate Print Loop)
+It's kinda like the Chrome console for JS but more powerful
+
+pip3 - The Python Package Installer (Are python libraries)
+pip3 install SOMETHING
+
+We installed ipython3 this way. 
+
+COULN'T GET IPYTHON TO WORK. COME BACK TO THIS IF NECESSARY
+
+
+Variables in Python
+
+NUMBERS
+
+Three types of numbers in python (JS only have one (floats))
+intigers and float and complex (but don't worry about complex)
+5    and 5.0 
+integer division // (will return an integer instead of a float)
+
+STRINGS (very similar to js)
+Python has f strings (like a string templet literal)
+f"{some_variable}"
+
+print is console.log
+
+\T create space 
+\n sends to the next line
+
+LISTS (we dont have an array, we have lists)
+
+BOOLEANS
+True has to be capitalized So does False
+can't compare strings and init like you can in js
+
+EQUALITY IN Python
+There is no loose equality in Python
+== is strick equality. 7 == '7' False (would be true is js)
+[1,2,3]==[1,2,3] True in Python BIG DIFFERENCE 
+if you want to check to equality of reference we have is
+
+INDENTATION 
+no {} ALL THAT MATTERS IN THE INDENTATION!
+EVERYONE AGREES: it should always be 4 spaces
+
+How to run the code from vs.code/gain access to it in terminal aswell
+python3 FULL FILE NAME - will run the code
+%run test.py - will run code in ipython
+
+CONDITIONALS in python
+if:
+elif:
+else:
+
+Ternary in python
+if     else     not ? :
+do_if_true if CONDITION else do_if_false    is python
+condition ? do if true : do it false
+
+IF/ELSEIF/ ELSE IN PYTHON
+age = 19
+isBirthday = True
+
+if age >= 21:
+    print("Come on in champ and get drunk")
+    if isBirthday:
+        print('happybirday, here is a free martini')
+elif age >= 18:
+    print('You can come in but no drink')
+else:
+    print('sorry go home kid')
+
+color = 'blue'
+print('good choice') if color == 'teal' else print ('meh')
+
+BOOLEANS in python
+&& || !
+python: and or not
+
+TRUTHINESS AND FALSINESS
+0 0.0 "" None, False empty [], empty {}, empty Set, are the values that are FALSY
+None is a type and is like null in python. Just means nothing is there
+
+
+
+
+
+WHILE LOOPS IN PYTHON
+
+# num = 0
+
+# while num <= 100:
+#     if num == 50:
+#         break
+#     print(num)
+#     num += 10
+
+# print('All done!')
+
+# Python Guessing Game
+target = 37 
+guess = None
+while guess != target:
+    guess = input('Please enter a guess...') #input() returns
+    if guess == "q" or guess == "quit":
+        break
+    guess = int(guess)    #Turn guess into an int 
+
+print('All done')
+
+# no uniary operator ++ or -- in python
+# would have to num += 1
+
+# js
+# while(num <= 100){
+#     console.log(num);
+#     num += 10
+# }
+# console.log('All done!')
+
+
+
+
+FOR LOOPS IN PYTHON
+
+JS for(let i = 10; i <= 9; i++){ THIS DOESNT EXSIST IN PYTHON
+
+}
+for(let char of "hello")
+{console.log(char)}
+
+colors = ['red', 'orange', 'yellow']
+for color in colors:
+    print(color)
+
+for char in "ABCDEFGHIJKLMNOPQRSTUVWXYX":
+    print(char)
+
+for num in "abcde":
+    print("Hello")
+
+# range() a really nice way of generating numbers
+
+for n in range(10):    # dont need for(let i = 0..blah blah bla) because we have ranges in python
+    print(n)
+
+
+RANGES()
+
+one option is to enter in a stopping point range(5) defualt start point is 0
+deautl step is 1
+
+list(range(-5, 19, 2))
+    (start, stop, step)
+
+
+
+PYTHON FUNCTIONS
+def greet(person):
+    return f"Hello there, {person}"
+# if you dont return a avalue None will be returned
+
+def divide (a,b):
+    if type(a) is int and type(b) is int:
+        return a/b
+
+PYTHON ARGUMENTS
+
+def send_email(to_email, from_email, subject):
+    email = f"""
+    to: {to_email}
+    from: {from_email}
+    subject: {subject}
+    """
+    print(email)
+
+send_email(subject='meow', to_email="blue@gmail.com", from_email='Jeremy@jerem.com')
+    # The above syntax allows us to not know the proper order
+
+# help(pass in fucntion here) and the terminal will give information about that funcion
+
+def power(num, power=2):   #can pass in a default value with = something.
+    return num ** power     #default arguments cannot come before required arguments
+
+
+
+
+
+dir()  and help()
+
+#Getting help in Python (built in functions) 
+
+#dir() - Shows me the methods and attributes of this object
+#dir(str)
+#dir('help') same as above
+
+#help(str)
+#help() - keywords
+#help(pring)
+#help(def)
+#help(anything)
+
+#help(some_function) will print out the special note that was or can be written in function by '''notes to be read'''
+# These special strings that are used for notes are called doc string conversations
+# the doc string conversation needs to be the first thing
+
+
